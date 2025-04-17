@@ -1,0 +1,42 @@
+.progress-section {
+    padding: clamp(80px, 8vw, 120px) 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease forwards;
+    text-align: center;
+  }
+  
+  .progress-section h1 {
+    font-size: clamp(2.2rem, 6vw, 3rem);
+    color: var(--primary);
+    margin-bottom: 20px;
+  }
+  
+  .progress-section .intro {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: var(--text-muted);
+    margin-bottom: 50px;
+    line-height: 1.8;
+  }
+  
+  .learning-phase {
+    text-align: left;
+    margin-bottom: 50px;
+  }
+  
+  .learning-phase h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+  }
+  
+  .learning-phase ul {
+    padding-left: 20px;
+    color: var(--text-muted);
+  }
+  
+  .learning-phase li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  

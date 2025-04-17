@@ -1,0 +1,206 @@
+/* ===== HOME.CSS: Página principal refinada ===== */
+
+/* Estrutura geral */
+.homepage {
+  padding-top: 120px;
+  background-color: var(--bg-light);
+  color: var(--text);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: clamp(60px, 8vw, 100px) 20px;
+  background: linear-gradient(to bottom right, var(--primary-light), #ffffff);
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  color: var(--primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: 0 auto 30px;
+  line-height: 1.75;
+}
+
+.cta {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.cta:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px var(--shadow-medium);
+}
+
+/* HIGHLIGHTS */
+.highlights {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: clamp(40px, 6vw, 60px) auto;
+  max-width: 900px;
+}
+
+.highlight-box {
+  background: var(--white);
+  border: 1px solid var(--primary);
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  color: var(--primary);
+  transition: all 0.2s ease;
+}
+
+.highlight-box:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* FEATURED PROJECT */
+.featured-project {
+  padding: clamp(60px, 8vw, 100px) 20px;
+  text-align: center;
+}
+
+.featured-project h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+
+.project-card {
+  background: var(--white);
+  padding: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px var(--shadow-light);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px var(--shadow-medium);
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: var(--text-muted);
+}
+
+/* BLOG PREVIEW */
+.blog-preview {
+  text-align: center;
+  padding: clamp(60px, 8vw, 100px) 20px;
+  background-color: var(--primary-light);
+}
+
+.blog-preview h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+
+.blog-snippet {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.blog-snippet h3 a {
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 1.3rem;
+  transition: color 0.2s ease;
+}
+
+.blog-snippet h3 a:hover {
+  color: var(--primary-dark);
+}
+
+.blog-snippet .meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.blog-snippet p {
+  font-size: 1rem;
+  margin: 10px 0 20px;
+  color: var(--text);
+}
+
+.read-more {
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* FINAL CTA */
+.footer-cta {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 1.1rem;
+}
+
+.footer-cta a {
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-cta a:hover {
+  text-decoration: underline;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .project-card,
+  .blog-snippet {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Rodrigo Leite</title>
+    <meta name="description"
+        content="Learning journal and blog posts by Rodrigo Ribeiro Leite about web development, Python, projects and personal growth.">
+    <link rel="icon" href="assets/img/favicon.ico" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/blog.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/whiteLogo1.png" alt="Rodrigo Leite Logo" /></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="blog-section">
+        <h1>My Learning Journal</h1>
+        <p class="blog-intro">
+          Here’s where I reflect on what I’m learning — the wins, the mistakes, and everything in between.
+        </p>
+      
+        <div class="blog-list">
+      
+          <!-- POST 1 -->
+          <article class="blog-post">
+            <button class="blog-toggle">Why I Designed TimeCash the Way I Did <span class="date">· April 2024</span></button>
+            <div class="blog-content">
+              <p>TimeCash was the first project I built that solved a real problem in my life. No tutorials, no copying code — just me, a goal, and a lot of trial and error.</p>
+              <h3>The Problem</h3>
+              <p>I was managing payments for workers on a weekly basis, and it was getting messy. I needed something simple, visual, and central — something that I could access easily and update quickly.</p>
+              <h3>The Solution</h3>
+              <p>I decided to build TimeCash: a personal payment tracker where I could see who worked when, how much they earned, and what was still unpaid. It had to be clean. No bloat. Just week, names, values, and totals.</p>
+              <h3>What I Learned</h3>
+              <ul>
+                <li>How to actually structure something from scratch</li>
+                <li>How design decisions are tied to real use, not just aesthetics</li>
+                <li>That coding is much more fun when you’re solving your own problem</li>
+              </ul>
+              <h3>What I’ll Improve</h3>
+              <p>
+                - Add authentication<br>
+                - Turn it into a CRUD app<br>
+                - Possibly make it public
+              </p>
+            </div>
+          </article>
+      
+          <!-- POST 2 -->
+          <article class="blog-post">
+            <button class="blog-toggle">How I Integrated My First API (And Almost Gave Up 😅) <span class="date">· May 2024</span></button>
+            <div class="blog-content">
+              <p>Integrating an API for the first time was like trying to solve a Rubik’s cube blindfolded. But I learned more in that week than I had in a month of tutorials.</p>
+              <h3>What I Was Trying To Do</h3>
+              <p>I wanted to pull weather data for my site using a public API. Sounds easy, right? Until I hit async issues, CORS errors, and a lot of confusion.</p>
+              <h3>What Went Wrong</h3>
+              <ul>
+                <li>Didn’t understand how fetch() worked</li>
+                <li>Confused .then() vs async/await</li>
+                <li>Didn’t know what to do with JSON</li>
+              </ul>
+              <h3>How I Solved It</h3>
+              <p>I opened DevTools, read the API docs carefully, logged everything, and finally got it working. The first time I saw "temperature: 13°C" show up, I cheered out loud.</p>
+              <h3>What I Learned</h3>
+              <ul>
+                <li>APIs are powerful when you understand them</li>
+                <li>console.log is your best friend</li>
+                <li>It’s okay to slow down and figure things out</li>
+              </ul>
+            </div>
+          </article>
+      
+        </div>
+      </section>
+      
+
+
+    <footer class="footer">
+        <p>© 2024 Rodrigo Ribeiro Leite. All Rights Reserved.</p>
+        <div class="footer-socials">
+            <a href="https://github.com/drigorleite" target="_blank" aria-label="GitHub">GitHub</a>
+            <a href="https://linkedin.com/in/drigorleite" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+<script>
+    document.querySelectorAll('.blog-toggle').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const post = btn.closest('.blog-post');
+    post.classList.toggle('open');
+  });
+});
+</script>
+</html>

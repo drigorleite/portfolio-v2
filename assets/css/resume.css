@@ -1,0 +1,141 @@
+/* ===== RESUME.CSS: Currículo estilizado e refinado ===== */
+
+.resume-section {
+  padding: clamp(80px, 8vw, 120px) 20px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.resume-section h1 {
+  font-size: clamp(2.2rem, 6vw, 3rem);
+  color: var(--primary);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.download-btn {
+  margin: 20px auto 50px;
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  font-weight: bold;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.download-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-medium);
+}
+
+/* Blocos */
+.resume-block {
+  margin-bottom: 60px;
+  text-align: left;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.resume-block h2 {
+  font-size: clamp(1.6rem, 5vw, 2rem);
+  color: var(--primary);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 6px;
+}
+
+.item {
+  margin-bottom: 28px;
+}
+
+.item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.item p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  min-width: 260px;
+}
+
+.column h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column li {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: var(--text-muted);
+  position: relative;
+  padding-left: 1rem;
+}
+
+.column li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+/* Certifications */
+.resume-block ul {
+  list-style: disc inside;
+  font-size: 1rem;
+  color: var(--text-muted);
+  padding-left: 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .resume-section {
+    padding: 100px 20px 40px;
+  }
+
+  .skills-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .download-btn {
+    padding: 12px 22px;
+  }
+}
+
+/* Animação */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

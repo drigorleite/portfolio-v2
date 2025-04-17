@@ -1,0 +1,139 @@
+/* ===== BLOG.CSS: Blog page styles refinado ===== */
+
+.blog-section {
+    padding: clamp(80px, 8vw, 120px) 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease forwards;
+    text-align: center;
+  }
+  
+  .blog-section h1 {
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    color: var(--primary);
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .blog-intro {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: var(--text-muted);
+    margin-bottom: 50px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: left;
+  }
+  
+  /* Cada post */
+  .blog-post {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 10px var(--shadow-light);
+    transition: var(--transition);
+  }
+  
+  .blog-post:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 24px var(--shadow-medium);
+  }
+  
+  .blog-post h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .blog-post h2 a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .blog-post h2 a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+  }
+  
+  .blog-post .meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  
+  .blog-post p {
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.7;
+  }
+  
+  /* Scroll animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .blog-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    color: var(--primary);
+    cursor: pointer;
+    padding: 12px 0;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .blog-toggle:hover {
+    color: var(--primary-dark);
+  }
+  
+  .blog-toggle .date {
+    font-weight: normal;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-left: 10px;
+  }
+  
+  .blog-content {
+    display: none;
+    padding: 15px 0 30px;
+    border-bottom: 1px solid #eee;
+    animation: fadeInUp 0.5s ease forwards;
+  }
+  
+  .blog-post.open .blog-content {
+    display: block;
+  }
+  
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .blog-post {
+      padding: 20px;
+    }
+  
+    .blog-post h2 {
+      font-size: 1.3rem;
+    }
+  
+    .blog-section {
+      padding: 60px 20px;
+    }
+  }
+  
